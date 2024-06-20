@@ -13,6 +13,7 @@
 		5E2DAC042C22FED9006EC545 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E2DAC032C22FED9006EC545 /* Preview Assets.xcassets */; };
 		5E2DAC0D2C245EF8006EC545 /* TelaUmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2DAC0C2C245EF8006EC545 /* TelaUmView.swift */; };
 		5E2DAC0F2C24662E006EC545 /* TelaTresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2DAC0E2C24662E006EC545 /* TelaTresView.swift */; };
+		5E2DAC112C24B30F006EC545 /* TelaDoisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2DAC102C24B30F006EC545 /* TelaDoisView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		5E2DAC032C22FED9006EC545 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5E2DAC0C2C245EF8006EC545 /* TelaUmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaUmView.swift; sourceTree = "<group>"; };
 		5E2DAC0E2C24662E006EC545 /* TelaTresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaTresView.swift; sourceTree = "<group>"; };
+		5E2DAC102C24B30F006EC545 /* TelaDoisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaDoisView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				5E2DABFC2C22FED8006EC545 /* lolaApp.swift */,
 				5E2DABFE2C22FED8006EC545 /* ContentView.swift */,
 				5E2DAC0C2C245EF8006EC545 /* TelaUmView.swift */,
+				5E2DAC102C24B30F006EC545 /* TelaDoisView.swift */,
 				5E2DAC0E2C24662E006EC545 /* TelaTresView.swift */,
 				5E2DAC002C22FED9006EC545 /* Assets.xcassets */,
 				5E2DAC022C22FED9006EC545 /* Preview Content */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E2DAC112C24B30F006EC545 /* TelaDoisView.swift in Sources */,
 				5E2DAC0F2C24662E006EC545 /* TelaTresView.swift in Sources */,
 				5E2DABFF2C22FED8006EC545 /* ContentView.swift in Sources */,
 				5E2DAC0D2C245EF8006EC545 /* TelaUmView.swift in Sources */,

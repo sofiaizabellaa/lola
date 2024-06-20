@@ -1,3 +1,5 @@
+
+
 //
 //  ContentView.swift
 //  lola
@@ -12,7 +14,10 @@ struct TelaInicialView: View {
         ZStack{
             Color.rosaClaro
             HStack {
+                Image ("lings")
+                Image ("logo")
             }
+            .padding(.leading,-120)
         }
         .ignoresSafeArea()
     }

@@ -10,6 +10,7 @@ import SwiftUI
 struct ResultView: View {
     
     var lingPred: Int
+    
     @State private var linguagensAmor: [Int: CardResultado] = [
         0: CardResultado(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste")]
     
@@ -30,7 +31,7 @@ struct ResultView: View {
                         .offset(x:-175, y:5)
                 }
                 .layoutPriority(1)
-                FlipCardView(cardName: linguagensAmor[0]!.cardFrente, themeName: linguagensAmor[0]!.cardVerso, presenter: FlipCardPresenter())
+                FlipCardView(cardName: linguagensAmor[lingPred]!.cardFrente, themeName: linguagensAmor[lingPred]!.cardVerso, presenter: FlipCardPresenter())
                 
                 HStack {
                     Button(action: {}, label:

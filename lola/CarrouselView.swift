@@ -13,7 +13,7 @@ struct CarrosselView: View {
         
     @State private var currentIndex = 0
     @State var lingList: [Int] = [7,7,7,7,7]
-    @State var lindPred: Int = 7
+    @State var lingPred: Int = 7
     
     let items = Array(0..<5)
     
@@ -150,30 +150,33 @@ struct CarrosselView: View {
         ProgressView(value: progressDone, total: 5).progressViewStyle(BarProgressStyle(color:.vinho, height:20.0))
         if progressDone == 5 {
             Button(action: {
-                    lindPred = mostFrequentElement(in: lingList)!
-                    print(lindPred)
+                    lingPred = mostFrequentElement(in: lingList)!
+                    
+                    print(lingPred)
                     },
                    label: {
                 Image("btn_qresult")
                     .resizable()
                     .frame(width: 60, height: 60)
             })
+                
+            }
             Spacer()
         }
         
         
-    }
+
     
     
     func mostFrequentElement(in array: [Int]) -> Int? {
-            var counts: [Int: Int] = [:]
-
-            for element in array {
-                counts[element, default: 0] += 1
-            }
-
-            return counts.max { $0.value < $1.value }?.key
+        var counts: [Int: Int] = [:]
+        
+        for element in array {
+            counts[element, default: 0] += 1
         }
+        
+        return counts.max { $0.value < $1.value }?.key
+    }
 }
 
 struct Answer: Identifiable {

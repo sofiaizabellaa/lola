@@ -80,9 +80,13 @@ struct CarrosselView: View {
                                             if questionsList[index].flag1 {
                                                 questionsList[index].flag1.toggle()
                                                 questionsList[index].flag2.toggle()
+                                                lingList[index] = questionsList[index].answer2.lingAmor
+
                                             }
                                             else {
                                                 questionsList[index].flag2.toggle()
+                                                lingList[index] = questionsList[index].answer2.lingAmor
+
                                             }   }   ) {
                                                     Text("\(questionsList[index].answer2.text)")
                                                         .font(.subheadline.weight(.heavy))
@@ -141,7 +145,7 @@ struct CarrosselView: View {
         let progressDone: CGFloat = CGFloat(questionsList.filter{ $0.isAnswered }.count)
         ProgressView(value: progressDone, total: 5).progressViewStyle(BarProgressStyle(color:.vinho, height:20.0))
         if progressDone == 5 {
-                Button(action: { }, label: {
+            Button(action: { print(lingList)}, label: {
                     Image("btn_qresult")
                         .resizable()
                         .frame(width: 60, height: 60)

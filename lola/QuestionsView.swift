@@ -9,7 +9,22 @@ import SwiftUI
 
 struct QuestionsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.rosaClaro.ignoresSafeArea()
+            VStack {
+                Spacer().frame(height:10)
+                HStack {
+                    Text("Responda ao teste ”As \ncinco linguagens do \namor” de Gary Chapman escolhendo a alternativa \nde sua preferencia")
+                        .font(.system(size: 23).weight(.heavy))
+                        .foregroundStyle(.white)
+                    Image("dots").resizable().frame(width:15, height: 35)
+                        .offset(x:-79, y:60)
+                }
+                .layoutPriority(1)
+            CarrosselView()
+                
+            }
+        }
     }
 }
 

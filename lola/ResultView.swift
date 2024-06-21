@@ -1,0 +1,62 @@
+//
+//  ResultView.swift
+//  lola
+//
+//  Created by Caio Silva on 21/06/24.
+//
+
+import SwiftUI
+
+struct ResultView: View {
+    
+    var lingPred: Int
+    @State private var linguagensAmor: [Int: CardResultado] = [
+        0: CardResultado(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste")]
+    
+    var body: some View {
+        ZStack {
+            Color.rosaClaro.ignoresSafeArea()
+            VStack {
+                
+                    Text("Toque e descubra")
+                        .font(.system(size: 34).weight(.heavy))
+                        .foregroundStyle(.vinho)
+                HStack {
+                    Text("sobre a linguagem do \namor de sua pessoa \nquerida")
+                        .font(.system(size: 25).weight(.regular))
+                        .foregroundStyle(.vinho)
+                        .offset(x:-15, y: -25)
+                    Image("dots").resizable().frame(width:15, height: 35)
+                        .offset(x:-175, y:5)
+                }
+                .layoutPriority(1)
+                FlipCardView(cardName: linguagensAmor[0]!.cardFrente, themeName: linguagensAmor[0]!.cardVerso, presenter: FlipCardPresenter())
+                
+                HStack {
+                    Button(action: {}, label:
+                            
+                            {
+                        Image("btn_back_test")
+                            
+                    })
+                    
+                    Button(action: {}, label: {
+                        Image("btn_go")
+                           
+                    })
+                    
+                }
+
+            }
+        }
+    }
+    
+    struct CardResultado {
+        var cardFrente: String
+        var cardVerso: String
+    }
+}
+
+#Preview {
+    ResultView(lingPred: 0)
+}

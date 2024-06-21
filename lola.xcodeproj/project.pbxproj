@@ -15,6 +15,8 @@
 		D454372C2C247FC4000538B6 /* QuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454372B2C247FC4000538B6 /* QuestionsView.swift */; };
 		D454372E2C247FE7000538B6 /* CarrouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454372D2C247FE7000538B6 /* CarrouselView.swift */; };
 		D45437302C248015000538B6 /* BarProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454372F2C248015000538B6 /* BarProgressStyle.swift */; };
+		D45437322C25E868000538B6 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45437312C25E868000538B6 /* ResultView.swift */; };
+		D45437342C25E968000538B6 /* FlipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45437332C25E968000538B6 /* FlipCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		D454372B2C247FC4000538B6 /* QuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsView.swift; sourceTree = "<group>"; };
 		D454372D2C247FE7000538B6 /* CarrouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrouselView.swift; sourceTree = "<group>"; };
 		D454372F2C248015000538B6 /* BarProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarProgressStyle.swift; sourceTree = "<group>"; };
+		D45437312C25E868000538B6 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		D45437332C25E968000538B6 /* FlipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				5E2DAC0C2C245EF8006EC545 /* TelaUmView.swift */,
 				D454372F2C248015000538B6 /* BarProgressStyle.swift */,
 				D454372B2C247FC4000538B6 /* QuestionsView.swift */,
+				D45437312C25E868000538B6 /* ResultView.swift */,
+				D45437332C25E968000538B6 /* FlipCardView.swift */,
 				D454372D2C247FE7000538B6 /* CarrouselView.swift */,
 				5E2DAC002C22FED9006EC545 /* Assets.xcassets */,
 				5E2DAC022C22FED9006EC545 /* Preview Content */,
@@ -154,6 +160,8 @@
 				D45437302C248015000538B6 /* BarProgressStyle.swift in Sources */,
 				5E2DABFF2C22FED8006EC545 /* ContentView.swift in Sources */,
 				5E2DAC0D2C245EF8006EC545 /* TelaUmView.swift in Sources */,
+				D45437342C25E968000538B6 /* FlipCardView.swift in Sources */,
+				D45437322C25E868000538B6 /* ResultView.swift in Sources */,
 				5E2DABFD2C22FED8006EC545 /* lolaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

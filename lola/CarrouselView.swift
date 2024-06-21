@@ -7,9 +7,13 @@
 
 import SwiftUI
 
+
+
 struct CarrosselView: View {
-    
+        
     @State private var currentIndex = 0
+    @State var lingList: [Int] = [7,7,7,7,7]
+    @State var lindPred: Int = 7
     
     let items = Array(0..<5)
     
@@ -18,7 +22,7 @@ struct CarrosselView: View {
     @State private var questionsList: [CardQuestion] = [
         CardQuestion(
             answer1: Answer(text: "Gosta de receber mensagens de amor, carinho e afeto", lingAmor: 0),
-            answer2: Answer(text: "Gosta de receber abraços e caricias", lingAmor: 1),
+            answer2: Answer(text: "Gosta de receber abraços e caricias", lingAmor: 0),
             flag1: false, flag2: false),
         CardQuestion(
             answer1: Answer(text: "Gosta de passar tempo a sós com alguém que considera especial", lingAmor: 2),
@@ -26,18 +30,18 @@ struct CarrosselView: View {
             flag1: false, flag2: false),
         CardQuestion(
             answer1: Answer(text: "Gosta quando ganha presentes", lingAmor: 4),
-            answer2: Answer(text: "Gosta de fazer viagens com as pessoas que gosta e ama", lingAmor: 2),
+            answer2: Answer(text: "Gosta de fazer viagens com as pessoas que gosta e ama", lingAmor: 0),
             flag1: false, flag2: false),
         CardQuestion(
             answer1: Answer(text: "Sente-se amado(a) quando as pessoas fazem coisas para ajudar-lhe", lingAmor: 1),
-            answer2: Answer(text: "Sente-se amado(a) quando as pessoas lhe tocam", lingAmor: 4),
+            answer2: Answer(text: "Sente-se amado(a) quando as pessoas lhe tocam", lingAmor: 0),
             flag1: false, flag2: false),
         CardQuestion(
             answer1: Answer(text: "Sente-se amado(a) quando alguém que o ama lhe rodeia com o braço", lingAmor: 1),
             answer2: Answer(text: "Sente-se amado(a) quando recebe um presente de alguém que o ama", lingAmor: 0),
             flag1: false, flag2: false)]
     
-    @State var lingList: [Int] = [7,7,7,7,7]
+    
     
     
     var body: some View {
@@ -81,23 +85,23 @@ struct CarrosselView: View {
                                                 questionsList[index].flag1.toggle()
                                                 questionsList[index].flag2.toggle()
                                                 lingList[index] = questionsList[index].answer2.lingAmor
-
+                                                
                                             }
                                             else {
                                                 questionsList[index].flag2.toggle()
                                                 lingList[index] = questionsList[index].answer2.lingAmor
-
+                                                
                                             }   }   ) {
-                                                    Text("\(questionsList[index].answer2.text)")
-                                                        .font(.subheadline.weight(.heavy))
-                                                        .foregroundColor(.vinho)
-                                                    
-                                                        .frame(width: 270, height: 40)
-                                                        .padding()
-                                                        .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.vinho, lineWidth: 6).shadow(color: .vinho, radius: -2, x: 0, y: -6))
-                                                        .background(questionsList[index].flag2 ? .rosaClaro : .white)
-                                                        .cornerRadius(20)
-                                                }
+                                                Text("\(questionsList[index].answer2.text)")
+                                                    .font(.subheadline.weight(.heavy))
+                                                    .foregroundColor(.vinho)
+                                                
+                                                    .frame(width: 270, height: 40)
+                                                    .padding()
+                                                    .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.vinho, lineWidth: 6).shadow(color: .vinho, radius: -2, x: 0, y: -6))
+                                                    .background(questionsList[index].flag2 ? .rosaClaro : .white)
+                                                    .cornerRadius(20)
+                                            }
                                         HStack {
                                             Button(action: {withAnimation {
                                                 currentIndex = currentIndex - 1 % items.count
@@ -145,14 +149,31 @@ struct CarrosselView: View {
         let progressDone: CGFloat = CGFloat(questionsList.filter{ $0.isAnswered }.count)
         ProgressView(value: progressDone, total: 5).progressViewStyle(BarProgressStyle(color:.vinho, height:20.0))
         if progressDone == 5 {
-            Button(action: { print(lingList)}, label: {
-                    Image("btn_qresult")
-                        .resizable()
-                        .frame(width: 60, height: 60)
-                })
+            Button(action: {
+                    lindPred = mostFrequentElement(in: lingList)!
+                    print(lindPred)
+                    },
+                   label: {
+                Image("btn_qresult")
+                    .resizable()
+                    .frame(width: 60, height: 60)
+            })
             Spacer()
-            }
+        }
+        
+        
     }
+    
+    
+    func mostFrequentElement(in array: [Int]) -> Int? {
+            var counts: [Int: Int] = [:]
+
+            for element in array {
+                counts[element, default: 0] += 1
+            }
+
+            return counts.max { $0.value < $1.value }?.key
+        }
 }
 
 struct Answer: Identifiable {
@@ -171,6 +192,13 @@ struct CardQuestion: Identifiable{
     var isAnswered: Bool { return flag1 || flag2 }
 }
 
+enum LinguagensTipo {
+    case toque
+    case presentes
+    case atos
+    case palavras
+    case tempo
+}
 
 #Preview {
     CarrosselView()

@@ -13,14 +13,31 @@ struct CarrosselView: View {
     
     let items = Array(0..<5)
     
-    let flagList: [Bool] = [false, false, false, false, false]
     
     @State private var progressDone = 0.0
-    @State private var questionsList: [CardQuestion] = [CardQuestion( id:0, answer1: "Gosta de receber mensagens de amor, carinho e afeto", answer2: "Gosta de receber abraços e caricias", flag1: false, flag2: false),
-                                                        CardQuestion( id:1, answer1: "Gosta de passar tempo a sós com alguém que considera especial", answer2: "Sente-se amado quando alguem o oferece ajuda prática", flag1: false, flag2: false),
-                                                        CardQuestion( id:2, answer1: "Gosta quando ganha presentes", answer2: "Gosta de fazer viagens com as pessoas que gosta e ama", flag1: false, flag2: false),
-                                                        CardQuestion( id:3, answer1: "Sente-se amado(a) quando as pessoas fazem coisas para ajudar-lhe", answer2: "Sente-se amado(a) quando as pessoas lhe tocam", flag1: false, flag2: false),
-                                                        CardQuestion( id:4, answer1: "Sente-se amado(a) quando alguém que o ama lhe rodeia com o braço", answer2: "Sente-se amado(a) quando recebe um presente de alguém que o ama", flag1: false, flag2: false)]
+    @State private var questionsList: [CardQuestion] = [
+        CardQuestion(
+            answer1: Answer(text: "Gosta de receber mensagens de amor, carinho e afeto", lingAmor: 0),
+            answer2: Answer(text: "Gosta de receber abraços e caricias", lingAmor: 1),
+            flag1: false, flag2: false),
+        CardQuestion(
+            answer1: Answer(text: "Gosta de passar tempo a sós com alguém que considera especial", lingAmor: 2),
+            answer2: Answer(text: "Sente-se amado quando alguem o oferece ajuda prática", lingAmor: 1),
+            flag1: false, flag2: false),
+        CardQuestion(
+            answer1: Answer(text: "Gosta quando ganha presentes", lingAmor: 4),
+            answer2: Answer(text: "Gosta de fazer viagens com as pessoas que gosta e ama", lingAmor: 2),
+            flag1: false, flag2: false),
+        CardQuestion(
+            answer1: Answer(text: "Sente-se amado(a) quando as pessoas fazem coisas para ajudar-lhe", lingAmor: 1),
+            answer2: Answer(text: "Sente-se amado(a) quando as pessoas lhe tocam", lingAmor: 4),
+            flag1: false, flag2: false),
+        CardQuestion(
+            answer1: Answer(text: "Sente-se amado(a) quando alguém que o ama lhe rodeia com o braço", lingAmor: 1),
+            answer2: Answer(text: "Sente-se amado(a) quando recebe um presente de alguém que o ama", lingAmor: 0),
+            flag1: false, flag2: false)]
+    
+    @State var lingList: [Int] = [7,7,7,7,7]
     
     
     var body: some View {
@@ -38,13 +55,18 @@ struct CarrosselView: View {
                                     VStack(spacing: 30) {
                                         Spacer().frame(height:5)
                                         Button(action: {
-                                            
                                             if questionsList[index].flag2 {
                                                 questionsList[index].flag2.toggle()
-                                                questionsList[index].flag1.toggle() } else { questionsList[index].flag1.toggle() }
+                                                questionsList[index].flag1.toggle()
+                                                lingList[index] = questionsList[index].answer1.lingAmor
+                                            }
+                                            else {
+                                                questionsList[index].flag1.toggle()
+                                                lingList[index] = questionsList[index].answer1.lingAmor
+                                            }
                                         })
                                         {
-                                            Text("\(questionsList[index].answer1)")
+                                            Text("\(questionsList[index].answer1.text)")
                                                 .font(.subheadline.weight(.heavy))
                                                 .foregroundColor(.vinho)
                                             
@@ -57,8 +79,12 @@ struct CarrosselView: View {
                                         Button(action: {
                                             if questionsList[index].flag1 {
                                                 questionsList[index].flag1.toggle()
-                                                questionsList[index].flag2.toggle() } else { questionsList[index].flag2.toggle() }   }   ) {
-                                                    Text("\(questionsList[index].answer2)")
+                                                questionsList[index].flag2.toggle()
+                                            }
+                                            else {
+                                                questionsList[index].flag2.toggle()
+                                            }   }   ) {
+                                                    Text("\(questionsList[index].answer2.text)")
                                                         .font(.subheadline.weight(.heavy))
                                                         .foregroundColor(.vinho)
                                                     
@@ -124,15 +150,22 @@ struct CarrosselView: View {
             }
     }
 }
-struct CardQuestion: Identifiable {
-    var id: Int
-    var answer1: String
-    var answer2: String
+
+struct Answer: Identifiable {
+    var id = UUID()
+    var text: String
+    var lingAmor: Int
+}
+
+
+struct CardQuestion: Identifiable{
+    var id = UUID()
+    var answer1: Answer
+    var answer2: Answer
     var flag1: Bool
     var flag2: Bool
     var isAnswered: Bool { return flag1 || flag2 }
 }
-
 
 
 #Preview {

@@ -42,7 +42,7 @@ struct TelaUmView: View {
                               .overlay(
                                 RoundedRectangle(cornerRadius: 30)
                                   .inset(by: -1.5)
-                                  .stroke(Color(red: 0.72, green: 0, blue: 0.16), lineWidth: 3)
+                                  .stroke(Color.vinho, lineWidth: 3)
         )
                         }
                         .frame(width: 341, height: 98)

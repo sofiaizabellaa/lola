@@ -9,6 +9,9 @@ import SwiftUI
 
 struct RelacaoView: View {
     @State private var mudarView = false
+    @State private var tipoRelacao: Int = 7
+    // TIPO 0=CASAL 1=AMIZADE 2=FAMILIA
+
 
     var body: some View {
         NavigationStack {
@@ -31,6 +34,7 @@ struct RelacaoView: View {
                     //Spacer().frame(height: 20)
                     Button(action: { 
                         mudarView = true
+                        tipoRelacao = 0
                     }  ) {
                         HStack(spacing:30) {
                             Image("heart")
@@ -49,6 +53,7 @@ struct RelacaoView: View {
                     Spacer().frame(height: 20)
                     Button(action: {
                         mudarView = true
+                        tipoRelacao = 1
                     }  ) {
                         HStack(spacing:30) {
                             Image("puzzel")
@@ -69,6 +74,7 @@ struct RelacaoView: View {
                     Spacer().frame(height: 20)
                     Button(action: {
                         mudarView = true
+                        tipoRelacao = 2
                     }  ) {
                         HStack() {
                             Image("house")

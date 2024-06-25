@@ -33,16 +33,26 @@ struct PerguntaView: View {
                 Spacer()
                     .frame(maxWidth: 30, maxHeight: 100)
                 HStack {
+                    Spacer()
+
                     Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                         Image ("btn_no")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width:180, height: 175)
+                            .offset(x:-20)
+
                     })
                     Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                         Image ("btn_yes")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width:180, height: 175)
+                            .offset(x:-10)
                     })
                 }
              
                 
-                                
                 Spacer()
                     .frame(maxHeight: 600)
                 

@@ -12,10 +12,10 @@ import SwiftUI
 struct CarrosselView: View {
         
     @State private var currentIndex = 0
-    @State var lingList: [Int] = [7,7,7,7,7]
+    @State var lingList: [Int] = [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7]
     @State var lingPred: Int = 7
     
-    let items = Array(0..<5)
+    let items = Array(0..<20)
     
     
     // 0 = atos, 1 = tempo, 2 = toques, 3 = palavras, 4 = presentes
@@ -235,8 +235,8 @@ struct CarrosselView: View {
         .frame(height: 444)
         
         let progressDone: CGFloat = CGFloat(questionsList.filter{ $0.isAnswered }.count)
-        ProgressView(value: progressDone, total: 5).progressViewStyle(BarProgressStyle(color:.vinho, height:20.0))
-        if progressDone == 5 {
+        ProgressView(value: progressDone, total: 20).progressViewStyle(BarProgressStyle(color:.vinho, height:20.0))
+        if progressDone == 20 {
             Button(action: {
                     lingPred = mostFrequentElement(in: lingList)!
                     

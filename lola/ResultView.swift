@@ -11,8 +11,14 @@ struct ResultView: View {
     
     var lingPred: Int
     
+    // 0 = atos, 1 = tempo, 2 = toques, 3 = palavras, 4 = presentes
+    
     @State private var linguagensAmor: [Int: CardResultado] = [
-        0: CardResultado(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste")]
+        0: CardResultado(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),
+        1: CardResultado(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),
+        2: CardResultado(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),
+        3: CardResultado(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),
+        4: CardResultado(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste")]
     
     var body: some View {
         ZStack {

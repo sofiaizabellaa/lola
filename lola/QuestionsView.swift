@@ -25,6 +25,7 @@ struct QuestionsView: View {
                 
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

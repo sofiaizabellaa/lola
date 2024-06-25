@@ -14,6 +14,7 @@ struct CarrosselView: View {
     @State private var currentIndex = 0
     @State var lingList: [Int] = [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7]
     @State var lingPred: Int = 7
+    @State private var resultView = false
     
     let items = Array(0..<20)
     
@@ -239,8 +240,7 @@ struct CarrosselView: View {
         if progressDone == 20 {
             Button(action: {
                     lingPred = mostFrequentElement(in: lingList)!
-                    
-                    print(lingPred)
+                    resultView = true
                     },
                    label: {
                 Image("btn_qresult")
@@ -250,6 +250,8 @@ struct CarrosselView: View {
                 
             }
             Spacer()
+            .navigationDestination(isPresented: $resultView) { ResultView(lingPred: lingPred) }
+
         }
         
         

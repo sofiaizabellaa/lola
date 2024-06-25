@@ -18,12 +18,15 @@ struct CarrosselView: View {
     let items = Array(0..<5)
     
     
+    // 0 = atos, 1 = tempo, 2 = toques, 3 = palavras, 4 = presentes
+     
     @State private var progressDone = 0.0
     @State private var questionsList: [CardQuestion] = [
         CardQuestion(
             answer1: Answer(text: "Gosta de receber mensagens de amor, carinho e afeto", lingAmor: 0),
             answer2: Answer(text: "Gosta de receber abraços e caricias", lingAmor: 0),
             flag1: false, flag2: false),
+        
         CardQuestion(
             answer1: Answer(text: "Gosta de passar tempo a sós com alguém que considera especial", lingAmor: 2),
             answer2: Answer(text: "Sente-se amado quando alguem o oferece ajuda prática", lingAmor: 1),
@@ -195,13 +198,13 @@ struct CardQuestion: Identifiable{
     var isAnswered: Bool { return flag1 || flag2 }
 }
 
-enum LinguagensTipo {
-    case toque
-    case presentes
-    case atos
-    case palavras
-    case tempo
-}
+//enum LinguagensTipo {
+//    case toque
+//    case presentes
+//    case atos
+//    case palavras
+//    case tempo
+//}
 
 #Preview {
     CarrosselView()

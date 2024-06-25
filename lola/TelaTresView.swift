@@ -32,11 +32,11 @@ struct TelaTresView: View {
                       .frame(width: 341, height: 98)
                       .background(.white)
                       .cornerRadius(30)
-                      .shadow(color: Color(red: 0.72, green: 0, blue: 0.16), radius: 0, x: 0, y: 10)
+                      .shadow(color: Color.vermelhoDois, radius: 0, x: 0, y: 10)
                       .overlay(
                         RoundedRectangle(cornerRadius: 30)
                           .inset(by: -1.5)
-                      .stroke(Color(red: 0.72, green: 0, blue: 0.16), lineWidth: 3))
+                          .stroke(Color.vermelhoDois, lineWidth: 3))
                     HStack {
                         Image ("toque")
                         Spacer()
@@ -59,11 +59,11 @@ struct TelaTresView: View {
                       .frame(width: 341, height: 98)
                       .background(.white)
                       .cornerRadius(30)
-                      .shadow(color: Color(red: 0.72, green: 0, blue: 0.16), radius: 0, x: 0, y: 10)
+                      .shadow(color: Color.vermelhoDois, radius: 0, x: 0, y: 10)
                       .overlay(
                         RoundedRectangle(cornerRadius: 30)
                           .inset(by: -1.5)
-                      .stroke(Color(red: 0.72, green: 0, blue: 0.16), lineWidth: 3))
+                          .stroke(Color.vermelhoDois, lineWidth: 3))
                     HStack {
                         Image ("atos")
                         Spacer ()
@@ -86,11 +86,11 @@ struct TelaTresView: View {
                       .frame(width: 341, height: 98)
                       .background(.white)
                       .cornerRadius(30)
-                      .shadow(color: Color(red: 0.72, green: 0, blue: 0.16), radius: 0, x: 0, y: 10)
+                      .shadow(color: Color.vermelhoDois, radius: 0, x: 0, y: 10)
                       .overlay(
                         RoundedRectangle(cornerRadius: 30)
                           .inset(by: -1.5)
-                      .stroke(Color(red: 0.72, green: 0, blue: 0.16), lineWidth: 3))
+                          .stroke(Color.vermelhoDois, lineWidth: 3))
                     HStack {
                         Image ("palavras")
                         Spacer ()
@@ -116,7 +116,7 @@ struct TelaTresView: View {
                       .overlay(
                         RoundedRectangle(cornerRadius: 30)
                           .inset(by: -1.5)
-                      .stroke(Color(red: 0.72, green: 0, blue: 0.16), lineWidth: 3))
+                          .stroke(Color.vermelhoDois, lineWidth: 3))
                     HStack {
                         Image ("presentes")
                         Spacer ()

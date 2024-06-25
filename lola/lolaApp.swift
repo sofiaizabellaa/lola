@@ -11,7 +11,7 @@ import SwiftUI
 struct lolaApp: App {
     var body: some Scene {
         WindowGroup {
-            TelaInicialView()
+            InicialView()
         }
     }
 }

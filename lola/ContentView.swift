@@ -9,7 +9,7 @@
 
 import SwiftUI
 
-struct TelaInicialView: View {
+struct InicialView: View {
     var body: some View {
         ZStack{
             Color.rosaClaro
@@ -24,5 +24,5 @@ struct TelaInicialView: View {
 }
 
 #Preview {
-    TelaInicialView()
+    InicialView()
 }

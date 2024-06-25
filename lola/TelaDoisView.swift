@@ -7,13 +7,16 @@
 
 import SwiftUI
 
-struct TelaDoisView: View {
+struct PerguntaView: View {
     var body: some View {
         
         ZStack {
             Color.rosaClaro
             VStack{
+                Spacer()
+                    .frame(maxHeight: 40)
                 HStack {
+                    Spacer()
                     Text ("Você já sabe qual a \nlinguagem do \namor da sua\npessoa querida")
                         .foregroundColor(.vinho)
                         .font(.largeTitle)
@@ -22,8 +25,15 @@ struct TelaDoisView: View {
                     .padding(.leading, -10)
                     Image ("question")
                         .offset(x:-60, y: 80)
-
                 }
+              
+                Spacer()
+                    .frame(maxWidth: 30, maxHeight: 100)
+                HStack {
+                    Image ("btn_no")
+                    Image ("btn_yes")
+                }
+             
                 
                                 
                 Spacer()
@@ -36,5 +46,5 @@ struct TelaDoisView: View {
 }
 
 #Preview {
-    TelaDoisView()
+    PerguntaView()
 }

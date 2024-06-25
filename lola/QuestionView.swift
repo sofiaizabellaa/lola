@@ -24,14 +24,21 @@ struct PerguntaView: View {
                         .padding(.top, 40) // Ajusta o padding superior conforme necessário
                     .padding(.leading, -10)
                     Image ("question")
-                        .offset(x:-60, y: 80)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width:45, height: 60)
+                        .offset(x:-70, y: 80)
                 }
               
                 Spacer()
                     .frame(maxWidth: 30, maxHeight: 100)
                 HStack {
-                    Image ("btn_no")
-                    Image ("btn_yes")
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        Image ("btn_no")
+                    })
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        Image ("btn_yes")
+                    })
                 }
              
                 

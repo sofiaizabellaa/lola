@@ -11,9 +11,9 @@
 		5E2DABFF2C22FED8006EC545 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2DABFE2C22FED8006EC545 /* ContentView.swift */; };
 		5E2DAC012C22FED9006EC545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E2DAC002C22FED9006EC545 /* Assets.xcassets */; };
 		5E2DAC042C22FED9006EC545 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E2DAC032C22FED9006EC545 /* Preview Assets.xcassets */; };
-		5E2DAC0F2C24662E006EC545 /* TelaTresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2DAC0E2C24662E006EC545 /* TelaTresView.swift */; };
-		5E2DAC112C24B30F006EC545 /* TelaDoisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2DAC102C24B30F006EC545 /* TelaDoisView.swift */; };
 		5E2DAC132C2AE62C006EC545 /* RelacaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2DAC122C2AE62C006EC545 /* RelacaoView.swift */; };
+		5E2DAC152C2AF016006EC545 /* LinguagemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2DAC142C2AF016006EC545 /* LinguagemView.swift */; };
+		5E2DAC172C2AFDF3006EC545 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2DAC162C2AFDF3006EC545 /* QuestionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,9 +22,9 @@
 		5E2DABFE2C22FED8006EC545 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5E2DAC002C22FED9006EC545 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E2DAC032C22FED9006EC545 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5E2DAC0E2C24662E006EC545 /* TelaTresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaTresView.swift; sourceTree = "<group>"; };
-		5E2DAC102C24B30F006EC545 /* TelaDoisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaDoisView.swift; sourceTree = "<group>"; };
 		5E2DAC122C2AE62C006EC545 /* RelacaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelacaoView.swift; sourceTree = "<group>"; };
+		5E2DAC142C2AF016006EC545 /* LinguagemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinguagemView.swift; sourceTree = "<group>"; };
+		5E2DAC162C2AFDF3006EC545 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +58,10 @@
 			isa = PBXGroup;
 			children = (
 				5E2DABFC2C22FED8006EC545 /* lolaApp.swift */,
-				5E2DAC122C2AE62C006EC545 /* RelacaoView.swift */,
 				5E2DABFE2C22FED8006EC545 /* ContentView.swift */,
-				5E2DAC102C24B30F006EC545 /* TelaDoisView.swift */,
-				5E2DAC0E2C24662E006EC545 /* TelaTresView.swift */,
+				5E2DAC122C2AE62C006EC545 /* RelacaoView.swift */,
+				5E2DAC162C2AFDF3006EC545 /* QuestionView.swift */,
+				5E2DAC142C2AF016006EC545 /* LinguagemView.swift */,
 				5E2DAC002C22FED9006EC545 /* Assets.xcassets */,
 				5E2DAC022C22FED9006EC545 /* Preview Content */,
 			);
@@ -146,10 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E2DAC152C2AF016006EC545 /* LinguagemView.swift in Sources */,
 				5E2DAC132C2AE62C006EC545 /* RelacaoView.swift in Sources */,
-				5E2DAC112C24B30F006EC545 /* TelaDoisView.swift in Sources */,
-				5E2DAC0F2C24662E006EC545 /* TelaTresView.swift in Sources */,
 				5E2DABFF2C22FED8006EC545 /* ContentView.swift in Sources */,
+				5E2DAC172C2AFDF3006EC545 /* QuestionView.swift in Sources */,
 				5E2DABFD2C22FED8006EC545 /* lolaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

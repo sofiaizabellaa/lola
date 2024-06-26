@@ -15,6 +15,7 @@ struct QuestionsView: View {
                 Spacer().frame(height:10)
                 HStack {
                     Text("Responda ao teste ”As \ncinco linguagens do \namor” de Gary Chapman escolhendo a alternativa \nde sua preferencia")
+                        .font(.custom("Inter-ExtraBold", size: 24))
                         .font(.system(size: 23).weight(.heavy))
                         .foregroundStyle(.vinho)
                     Image("dots").resizable().frame(width:15, height: 35)

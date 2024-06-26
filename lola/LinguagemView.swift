@@ -14,6 +14,7 @@ struct LinguagemView: View {
           VStack {
               HStack {
                   Text("Escolha a \nlinguagem do amor \nda sua pessoa \namada")
+                      .font(.custom("Inter-ExtraBold", size: 32))
                   .font(.system(size: 32).weight(.heavy))
                   .foregroundStyle(.vinho)
                   .offset(x:20, y:10)
@@ -33,6 +34,7 @@ struct LinguagemView: View {
                   .scaledToFit()
                   .offset(x:-15)
                 Text("Toque Físico")
+                      .font(.custom("Inter-ExtraBold", size: 24))
                   .font(.title2.weight(.heavy))
                   .foregroundColor(.vermelhoDois)
               }
@@ -51,8 +53,9 @@ struct LinguagemView: View {
                   .offset(x:-35)
                 Text("Atos de\nServiço")
                   .font(.title2.weight(.heavy))
+                  .font(.custom("Inter-ExtraBold", size: 24))
                   .foregroundColor(.vermelhoDois)
-                  .offset(x:-10)
+                  .offset(x:-20)
               }
               .frame(width: 270, height: 70)
               .padding()
@@ -69,6 +72,7 @@ struct LinguagemView: View {
                   .offset(x:-20)
                 Text("Palavras de\nAfirmação")
                   .font(.title2.weight(.heavy))
+                  .font(.custom("Inter-ExtraBold", size: 24))
                   .foregroundColor(.vermelhoDois)
                   .offset(x:-10)
               }
@@ -86,6 +90,7 @@ struct LinguagemView: View {
                   .scaledToFit()
                   .offset(x:-20)
                 Text("Presentes")
+                  .font(.custom("Inter-ExtraBold", size: 24))
                   .font(.title2.weight(.heavy))
                   .foregroundColor(.vermelhoDois)
                   .offset(x:-10)
@@ -105,6 +110,7 @@ struct LinguagemView: View {
                   .offset(x:-20)
                 Text("Tempo de\nQualidade")
                   .font(.title2.weight(.heavy))
+                  .font(.custom("Inter-ExtraBold", size: 24))
                   .foregroundColor(.vermelhoDois)
                   .offset(x:-10)
               }

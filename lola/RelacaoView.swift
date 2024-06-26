@@ -14,7 +14,7 @@ struct RelacaoView: View {
                 VStack {
                     HStack {
                         Text("Qual relação \ndeseja \nfortalecer")
-                        //.font(.largeTitle.weight(.heavy))
+                            .font(.custom("Inter-ExtraBold", size: 40))
                             .font(.system(size: 40).weight(.heavy))
                             .foregroundStyle(.vinho)
                             .offset(x:10, y:-40)
@@ -32,6 +32,7 @@ struct RelacaoView: View {
                                 .resizable()
                                 .scaledToFit()
                             Text("Casal")
+                                .font(.custom("Inter-Extrabold", size: 32))
                                 .font(.title.weight(.heavy))
                                 .foregroundColor(.vermelhoDois)
                         }.offset(x:-30)
@@ -49,6 +50,7 @@ struct RelacaoView: View {
                                 .scaledToFit()
                                 .offset(x:-5, y:-5)
                             Text("Amizade")
+                                .font(.custom("Inter-Extrabold", size: 32))
                                 .font(.title.weight(.heavy))
                                 .foregroundColor(.vermelhoDois)
                                 .offset(x:-10)
@@ -67,6 +69,7 @@ struct RelacaoView: View {
                                 .scaledToFit()
                                 .offset(x:-30)
                             Text("Família")
+                                .font(.custom("Inter-Extrabold", size: 32))
                                 .font(.title.weight(.heavy))
                                 .foregroundColor(.vermelhoDois)
                                 .offset(x:-5)

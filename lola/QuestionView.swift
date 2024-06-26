@@ -17,21 +17,22 @@ struct PerguntaView: View {
                     .frame(maxHeight: 40)
                 HStack {
                     Spacer()
-                    Text ("Você já sabe qual a \nlinguagem do \namor da sua\npessoa querida")
+                    Text ("Você já sabe a \nlinguagem do \namor da sua\npessoa querida")
+                        .font(.custom("Inter-ExtraBold", size: 36))
                         .foregroundColor(.vinho)
                         .font(.largeTitle)
                         .fontWeight(.heavy)
-                        .padding(.top, 40) // Ajusta o padding superior conforme necessário
-                    .padding(.leading, -10)
+                        .padding(.top, 40)
+                        .padding()
                     Image ("question")
                         .resizable()
                         .scaledToFit()
                         .frame(width:45, height: 60)
-                        .offset(x:-70, y: 80)
+                        .offset(x:-30, y: 80)
                 }
               
                 Spacer()
-                    .frame(maxWidth: 30, maxHeight: 100)
+                    .frame(maxWidth: 30, maxHeight: 70)
                 HStack {
                     Spacer()
 
@@ -41,7 +42,6 @@ struct PerguntaView: View {
                             .scaledToFit()
                             .frame(width:180, height: 175)
                             .offset(x:-20)
-
                     })
                     Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                         Image ("btn_yes")
@@ -50,6 +50,7 @@ struct PerguntaView: View {
                             .frame(width:180, height: 175)
                             .offset(x:-10)
                     })
+    
                 }
              
                 

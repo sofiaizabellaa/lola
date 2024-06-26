@@ -11,6 +11,7 @@ import SwiftUI
 struct AtividadesView: View {
     
     var lingPred: Int
+    @State private var voltaInicio = false
     @State private var randomNumber: Int = 0
     
     // 0 = atos, 1 = tempo, 2 = toques, 3 = palavras, 4 = presentes
@@ -47,7 +48,7 @@ struct AtividadesView: View {
                 
                 HStack {
                     
-                    Button(action: { }, label:
+                    Button(action: { voltaInicio = true }, label:
                             
                             {
                         Image("btn_begin")
@@ -64,6 +65,8 @@ struct AtividadesView: View {
             }
             .padding(.top)
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationDestination(isPresented: $voltaInicio) { RelacaoView() }
     }
     private func generateRandomNumber() {
         randomNumber = Int.random(in: 0...4)

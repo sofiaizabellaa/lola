@@ -1,13 +1,13 @@
 //
-//  ResultView.swift
+//  VisualizarLinguagemView.swift
 //  lola
 //
-//  Created by Caio Silva on 21/06/24.
+//  Created by Caio Silva on 26/06/24.
 //
 
 import SwiftUI
 
-struct ResultView: View {
+struct VisualizarLinguagemView: View {
     
     var lingPred: Int
     
@@ -65,7 +65,7 @@ struct ResultView: View {
             }
         }
         .navigationBarBackButtonHidden(true)
-        .navigationDestination(isPresented: $tView) { QuestionsView() }
+        .navigationDestination(isPresented: $tView) { LinguagemView() }
         .navigationDestination(isPresented: $sView) {
             AtividadesView(lingPred: lingPred)
         }
@@ -78,5 +78,5 @@ struct ResultView: View {
 }
 
 #Preview {
-    ResultView(lingPred: 0)
+    VisualizarLinguagemView(lingPred: 0)
 }

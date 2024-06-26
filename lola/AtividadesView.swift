@@ -2,7 +2,7 @@
 //  AtividadesView.swift
 //  lola
 //
-//  Created by Sofia Izabella Tenório Chaves on 26/06/24.
+//  Created by Sofia Izabella Tenório Chaves on 25/06/24.
 //
 
 import SwiftUI
@@ -88,4 +88,3 @@ struct CardAtividade {
 #Preview {
     AtividadesView(lingPred: 0)
 }
-

@@ -26,11 +26,12 @@ struct ResultView: View {
             VStack {
                 
                     Text("Toque e descubra")
-                        .font(.system(size: 34).weight(.heavy))
                         .foregroundStyle(.vinho)
+                        .font(.custom("Inter-ExtraBold", size: 32))
+                        .padding(.leading, -30)
                 HStack {
                     Text("sobre a linguagem do \namor de sua pessoa \nquerida")
-                        .font(.system(size: 25).weight(.regular))
+                        .font(.custom("Inter-Medium", size: 24))
                         .foregroundStyle(.vinho)
                         .offset(x:-15, y: -25)
                     Image("dots").resizable().frame(width:15, height: 35)

@@ -98,6 +98,7 @@ struct RelacaoView: View {
                 }
                 .offset(y:-50)
             }
+            .navigationBarBackButtonHidden(true)
             .navigationDestination(isPresented: $mudarView) { PerguntaView() }
          }
         }

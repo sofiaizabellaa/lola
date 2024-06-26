@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct LinguagemView: View {
+    
+    @State var lingPred: Int = 7
+    @State private var atView = false
+    
       var body: some View {
         ZStack {
           Color.rosaClaro.ignoresSafeArea()
@@ -27,7 +31,9 @@ struct LinguagemView: View {
               }
               
             Spacer().frame(height: 20)
-            Button(action: { }  ) {
+              // 0 = atos, 1 = tempo, 2 = toques, 3 = palavras, 4 = presentes
+            Button(action: { lingPred = 2
+                           atView = true }  ) {
               HStack {
                 Image("toque")
                   .resizable()
@@ -45,7 +51,8 @@ struct LinguagemView: View {
               .cornerRadius(30)
                 }
             Spacer().frame(height: 10)
-            Button(action: { }  ) {
+            Button(action: { lingPred = 0
+                atView = true}  ) {
               HStack() {
                 Image("atos")
                   .resizable()
@@ -64,7 +71,8 @@ struct LinguagemView: View {
               .cornerRadius(30)
                 }
             Spacer().frame(height: 10)
-            Button(action: { }  ) {
+            Button(action: { lingPred = 3
+                atView = true}  ) {
               HStack() {
                 Image("palavras")
                   .resizable()
@@ -83,7 +91,8 @@ struct LinguagemView: View {
               .cornerRadius(30)
                 }
             Spacer().frame(height: 10)
-            Button(action: { }  ) {
+            Button(action: { lingPred = 4
+                atView = true}  ) {
               HStack {
                 Image("presentes")
                   .resizable()
@@ -102,7 +111,8 @@ struct LinguagemView: View {
               .cornerRadius(30)
                 }
             Spacer().frame(height: 10)
-            Button(action: { }  ) {
+            Button(action: { lingPred = 1
+                atView = true}  ) {
               HStack() {
                 Image("tempo")
                   .resizable()
@@ -123,6 +133,7 @@ struct LinguagemView: View {
           }
         }
         .navigationBarBackButtonHidden(true)
+        .navigationDestination(isPresented: $atView) { VisualizarLinguagemView(lingPred: lingPred) }
       }
     }
 

@@ -53,7 +53,7 @@ struct AtividadesView: View {
                 .padding(.leading,-10)
                 .onAppear { self.generateRandomNumber() }
                 
-                FlipCardView(cardName: atividadeSugestao[lingPred]![randomNumber].cardFrente, themeName: atividadeSugestao[lingPred]![randomNumber].cardVerso, presenter: FlipCardPresenter())
+                FlipCardView(cardName: atividadeSugestao[lingPred]![randomNumber].cardVerso, themeName: atividadeSugestao[lingPred]![randomNumber].cardFrente, presenter: FlipCardPresenter())
                 
                 HStack {
                     

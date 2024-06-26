@@ -41,7 +41,7 @@ struct ResultView: View {
                         .offset(x:-175, y:5)
                 }
                 .layoutPriority(1)
-                FlipCardView(cardName: linguagensAmor[lingPred]!.cardFrente, themeName: linguagensAmor[lingPred]!.cardVerso, presenter: FlipCardPresenter())
+                FlipCardView(cardName: linguagensAmor[lingPred]!.cardVerso, themeName: linguagensAmor[lingPred]!.cardFrente, presenter: FlipCardPresenter())
                 
                 HStack {
                     Button(action: {

@@ -17,11 +17,11 @@ struct VisualizarLinguagemView: View {
     // 0 = atos, 1 = tempo, 2 = toques, 3 = palavras, 4 = presentes
     
     @State private var linguagensAmor: [Int: CardResultado] = [
-        0: CardResultado(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),
-        1: CardResultado(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),
-        2: CardResultado(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),
-        3: CardResultado(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),
-        4: CardResultado(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste")]
+        0: CardResultado(cardFrente: "atosfrente", cardVerso: "atosverso"),
+        1: CardResultado(cardFrente: "tempofrente", cardVerso: "tempoverso"),
+        2: CardResultado(cardFrente: "toquefrente", cardVerso: "toqueverso"),
+        3: CardResultado(cardFrente: "palavrasfrente", cardVerso: "palavrasverso"),
+        4: CardResultado(cardFrente: "presentesfrente", cardVerso: "presentesfrente")]
     
     var body: some View {
         ZStack {
@@ -41,7 +41,7 @@ struct VisualizarLinguagemView: View {
                         .offset(x:-175, y:5)
                 }
                 .layoutPriority(1)
-                FlipCardView(cardName: linguagensAmor[lingPred]!.cardFrente, themeName: linguagensAmor[lingPred]!.cardVerso, presenter: FlipCardPresenter())
+                FlipCardView(cardName: linguagensAmor[lingPred]!.cardVerso, themeName: linguagensAmor[lingPred]!.cardFrente, presenter: FlipCardPresenter())
                 
                 HStack {
                     Button(action: {

@@ -6,7 +6,22 @@
 //
 
 import SwiftUI
-struct AtividadesView: View{
+
+
+struct AtividadesView: View {
+    
+    var lingPred: Int
+    @State private var randomNumber: Int = 0
+    
+    // 0 = atos, 1 = tempo, 2 = toques, 3 = palavras, 4 = presentes
+    @State private var atividadeSugestao: [Int: [CardAtividade]] = [
+        0: [CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste")],
+        1: [CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste")],
+        2: [CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste")],
+        3: [CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste")],
+        4: [CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste"),CardAtividade(cardFrente: "cardNameTeste", cardVerso: "themeNameTeste")]]
+    
+    
     var body: some View {
         ZStack {
             Color.rosaClaro.ignoresSafeArea()
@@ -26,17 +41,20 @@ struct AtividadesView: View{
                         .offset(x:-30, y:-10)
                 }
                 .padding(.leading,-10)
+                .onAppear { self.generateRandomNumber() }
                 
-                Spacer ()
+                FlipCardView(cardName: atividadeSugestao[lingPred]![randomNumber].cardFrente, themeName: atividadeSugestao[lingPred]![randomNumber].cardVerso, presenter: FlipCardPresenter())
+                
                 HStack {
-                    Button(action: {}, label:
+                    
+                    Button(action: { }, label:
                             
                             {
                         Image("btn_begin")
                         
                     })
                     
-                    Button(action: {}, label: {
+                    Button(action: { self.generateRandomNumber() }, label: {
                         Image("btn_redo")
                         
                     })
@@ -47,14 +65,17 @@ struct AtividadesView: View{
             .padding(.top)
         }
     }
+    private func generateRandomNumber() {
+        randomNumber = Int.random(in: 0...4)
+    }
 }
 
-struct CardResultado {
+struct CardAtividade {
     var cardFrente: String
     var cardVerso: String
 }
 
 
 #Preview {
-    AtividadesView()
+    AtividadesView(lingPred: 0)
 }

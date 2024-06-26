@@ -11,6 +11,9 @@ struct ResultView: View {
     
     var lingPred: Int
     
+    @State private var tView = false
+    @State private var sView = false
+    
     // 0 = atos, 1 = tempo, 2 = toques, 3 = palavras, 4 = presentes
     
     @State private var linguagensAmor: [Int: CardResultado] = [
@@ -26,11 +29,12 @@ struct ResultView: View {
             VStack {
                 
                     Text("Toque e descubra")
-                        .font(.system(size: 34).weight(.heavy))
                         .foregroundStyle(.vinho)
+                        .font(.custom("Inter-ExtraBold", size: 32))
+                        .padding(.leading, -30)
                 HStack {
                     Text("sobre a linguagem do \namor de sua pessoa \nquerida")
-                        .font(.system(size: 25).weight(.regular))
+                        .font(.custom("Inter-Medium", size: 24))
                         .foregroundStyle(.vinho)
                         .offset(x:-15, y: -25)
                     Image("dots").resizable().frame(width:15, height: 35)
@@ -40,14 +44,18 @@ struct ResultView: View {
                 FlipCardView(cardName: linguagensAmor[lingPred]!.cardFrente, themeName: linguagensAmor[lingPred]!.cardVerso, presenter: FlipCardPresenter())
                 
                 HStack {
-                    Button(action: {}, label:
+                    Button(action: {
+                        tView = true
+                    }, label:
                             
                             {
                         Image("btn_back_test")
                             
                     })
                     
-                    Button(action: {}, label: {
+                    Button(action: {
+                        sView = true
+                    }, label: {
                         Image("btn_go")
                            
                     })
@@ -56,6 +64,9 @@ struct ResultView: View {
 
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationDestination(isPresented: $tView) { QuestionsView() }
+        .navigationDestination(isPresented: $sView) {  }
     }
     
     struct CardResultado {

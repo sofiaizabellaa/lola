@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct PerguntaView: View {
+    @State private var testeView = false
+    @State private var escolhaView = false
+
+    
     var body: some View {
         
         ZStack {
@@ -34,16 +38,18 @@ struct PerguntaView: View {
                 Spacer()
                     .frame(maxWidth: 30, maxHeight: 70)
                 HStack {
-                    Spacer()
-
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Button(action: {
+                        testeView = true
+                    }, label: {
                         Image ("btn_no")
                             .resizable()
                             .scaledToFit()
                             .frame(width:180, height: 175)
                             .offset(x:-20)
                     })
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Button(action: {
+                        escolhaView = true
+                    }, label: {
                         Image ("btn_yes")
                             .resizable()
                             .scaledToFit()
@@ -60,6 +66,10 @@ struct PerguntaView: View {
             }
         }
         .ignoresSafeArea()
+        .navigationBarBackButtonHidden(true)
+        .navigationDestination(isPresented: $testeView) { QuestionsView() }
+        .navigationDestination(isPresented: $escolhaView) { LinguagemView() }
+
     }
 }
 

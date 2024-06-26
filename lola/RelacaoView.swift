@@ -8,7 +8,13 @@
 import SwiftUI
 
 struct RelacaoView: View {
-        var body: some View {
+    @State private var mudarView = false
+    @State private var tipoRelacao: Int = 7
+    // TIPO 0=CASAL 1=AMIZADE 2=FAMILIA
+
+
+    var body: some View {
+        NavigationStack {
             ZStack {
                 Color.rosaClaro.ignoresSafeArea()
                 VStack {
@@ -26,7 +32,10 @@ struct RelacaoView: View {
                             .offset(x:-70)
                     }
                     //Spacer().frame(height: 20)
-                    Button(action: { }  ) {
+                    Button(action: { 
+                        mudarView = true
+                        tipoRelacao = 0
+                    }  ) {
                         HStack(spacing:30) {
                             Image("heart")
                                 .resizable()
@@ -43,7 +52,10 @@ struct RelacaoView: View {
                             .cornerRadius(30)
                     }
                     Spacer().frame(height: 20)
-                    Button(action: { }  ) {
+                    Button(action: {
+                        mudarView = true
+                        tipoRelacao = 1
+                    }  ) {
                         HStack(spacing:30) {
                             Image("puzzel")
                                 .resizable()
@@ -62,7 +74,10 @@ struct RelacaoView: View {
                         .cornerRadius(30)
                     }
                     Spacer().frame(height: 20)
-                    Button(action: { }  ) {
+                    Button(action: {
+                        mudarView = true
+                        tipoRelacao = 2
+                    }  ) {
                         HStack() {
                             Image("house")
                                 .resizable()
@@ -83,8 +98,9 @@ struct RelacaoView: View {
                 }
                 .offset(y:-50)
             }
+            .navigationDestination(isPresented: $mudarView) { PerguntaView() }
+         }
         }
-        
     }
     
         #Preview {

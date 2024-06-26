@@ -122,6 +122,7 @@ struct LinguagemView: View {
                 }
           }
         }
+        .navigationBarBackButtonHidden(true)
       }
     }
 

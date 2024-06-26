@@ -10,6 +10,9 @@
 import SwiftUI
 
 struct InicialView: View {
+    
+    @State private var showFullScreenCover: Bool = false // Variável de estado para controlar a navegação
+
     var body: some View {
         ZStack{
             Color.rosaClaro
@@ -20,6 +23,16 @@ struct InicialView: View {
             .padding(.leading,-120)
         }
         .ignoresSafeArea()
+        
+        // Configurar o temporizador para 3 segundos
+        .onAppear {
+                   DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                       self.showFullScreenCover = true
+                   }
+               }
+        .fullScreenCover(isPresented: $showFullScreenCover) {
+                    RelacaoView() // Tela de destino
+                }
     }
 }
 

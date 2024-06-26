@@ -11,6 +11,9 @@ struct ResultView: View {
     
     var lingPred: Int
     
+    @State private var tView = false
+    @State private var sView = false
+    
     // 0 = atos, 1 = tempo, 2 = toques, 3 = palavras, 4 = presentes
     
     @State private var linguagensAmor: [Int: CardResultado] = [
@@ -41,14 +44,18 @@ struct ResultView: View {
                 FlipCardView(cardName: linguagensAmor[lingPred]!.cardFrente, themeName: linguagensAmor[lingPred]!.cardVerso, presenter: FlipCardPresenter())
                 
                 HStack {
-                    Button(action: {}, label:
+                    Button(action: {
+                        tView = true
+                    }, label:
                             
                             {
                         Image("btn_back_test")
                             
                     })
                     
-                    Button(action: {}, label: {
+                    Button(action: {
+                        sView = true
+                    }, label: {
                         Image("btn_go")
                            
                     })
@@ -57,6 +64,9 @@ struct ResultView: View {
 
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationDestination(isPresented: $tView) { QuestionsView() }
+        .navigationDestination(isPresented: $sView) {  }
     }
     
     struct CardResultado {

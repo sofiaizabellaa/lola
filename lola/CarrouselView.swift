@@ -101,22 +101,22 @@ struct CarrosselView: View {
         
         CardQuestion(
             answer1: Answer(text: "Nunca se cansa de beijos e carícias", lingAmor: 2),
-            answer2: Answer(text: "Gosta quando as pessoas o escutam e mostram interesse genuíno no que esta dizendo", lingAmor: 3),
+            answer2: Answer(text: "Gosta quando o escutam e mostram interesse genuíno no que esta dizendo", lingAmor: 3),
             flag1: false, flag2: false),
         
         CardQuestion(
-            answer1: Answer(text: "Gosta realmente do sentimento que tem quando alguém dá total atenção", lingAmor: 1),
-            answer2: Answer(text: "Gosta realmente do sentimento que tem quando alguém lhe presta algum ato de serviço", lingAmor: 0),
+            answer1: Answer(text: "Gosta muito do sentimento que tem quando alguém dá total atenção", lingAmor: 1),
+            answer2: Answer(text: "Gosta muito do sentimento que tem quando alguém lhe faz algo", lingAmor: 0),
             flag1: false, flag2: false),
         
         CardQuestion(
-            answer1: Answer(text: "Sente-se amado(a) quando pessoas que gosta e ama ajudam nos seus trabalhos e projetos", lingAmor: 0),
+            answer1: Answer(text: "Sente-se amado(a) quando ajudam nos seus trabalhos e projetos", lingAmor: 0),
             answer2: Answer(text: "Gosta de dar e receber presentes para quem eu ama e gosta", lingAmor: 4),
             flag1: false, flag2: false),
         
         CardQuestion(
             answer1: Answer(text: "Gosta que as pessoas elogiem sua aparência e/ou seus resultados", lingAmor: 3),
-            answer2: Answer(text: "Sente-se amado(a) quando as pessoas apreciam suas ideias e e respeitam suas opiniões", lingAmor: 1),
+            answer2: Answer(text: "Sente-se amado(a) quando apreciam suas ideias e e respeitam suas opiniões", lingAmor: 1),
             flag1: false, flag2: false),
         
         CardQuestion(
@@ -125,7 +125,7 @@ struct CarrosselView: View {
             flag1: false, flag2: false),
         
         CardQuestion(
-            answer1: Answer(text: "Aprecia muito quando as pessoas que gosta e ama fazem gestos de serviço e apoio por ela", lingAmor: 0),
+            answer1: Answer(text: "Aprecia quando as pessoas  fazem gestos de serviço e apoio por ele(a)", lingAmor: 0),
             answer2: Answer(text: "Gosta de receber presentes que pessoas especiais fazem para ele(a)", lingAmor: 4),
             flag1: false, flag2: false),
     ]

@@ -18,12 +18,7 @@ struct AtividadesView: View {
     @State private var atividadeSugestao: [Int: [CardAtividade]] = [
         0: [CardAtividade(cardFrente: "atos_atv1_frente", cardVerso: "atos_atv1_verso"),CardAtividade(cardFrente: "atos_atv2_frente", cardVerso: "atos_atv2_verso"),CardAtividade(cardFrente: "atos_atv3_frente", cardVerso: "atos_atv3_verso"),CardAtividade(cardFrente: "atos_atv4_frente", cardVerso: "atos_atv4_verso"),CardAtividade(cardFrente: "atos_atv5_frente", cardVerso: "atos_atv5_verso")],
         1: [CardAtividade(cardFrente: "tempo_atv1_frente", cardVerso: "tempo_atv1_verso"),CardAtividade(cardFrente: "tempo_atv2_frente", cardVerso: "tempo_atv2_verso"),CardAtividade(cardFrente: "tempo_atv3_frente", cardVerso: "tempo_atv3_verso"),CardAtividade(cardFrente: "tempo_atv4_frente", cardVerso: "tempo_atv4_verso"),CardAtividade(cardFrente: "tempo_atv5_frente", cardVerso: "tempo_atv5_verso")],
-        2: [
-            CardAtividade(cardFrente: "toque_atv1_frente", cardVerso: "toque_atv1_verso"),
-            CardAtividade(
-                cardFrente: "toque_atv2_frente",
-                cardVerso: "toque_atv2_verso"
-            ),
+        2: [CardAtividade(cardFrente: "toque_atv1_frente", cardVerso: "toque_atv1_verso"),CardAtividade(cardFrente: "toque_atv2_frente",cardVerso: "toque_atv2_verso"),
             CardAtividade(cardFrente: "toque_atv3_frente", cardVerso: "toque_atv3_verso"),
             CardAtividade(cardFrente: "toque_atv4_frente", cardVerso: "toque_atv4_verso"),
             CardAtividade(cardFrente: "toque_atv5_frente", cardVerso: "toque_atv5_verso")

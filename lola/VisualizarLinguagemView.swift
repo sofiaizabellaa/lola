@@ -49,7 +49,7 @@ struct VisualizarLinguagemView: View {
                     }, label:
                             
                             {
-                        Image("btn_back_test")
+                        Image("btn_bck_linguagens")
                             
                     })
                     

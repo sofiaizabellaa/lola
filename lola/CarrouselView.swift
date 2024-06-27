@@ -236,8 +236,8 @@ struct CarrosselView: View {
         .frame(height: 444)
         
         let progressDone: CGFloat = CGFloat(questionsList.filter{ $0.isAnswered }.count)
-        ProgressView(value: progressDone, total: 20).progressViewStyle(BarProgressStyle(color:.vinho, height:20.0))
-        if progressDone == 20 {
+        ProgressView(value: progressDone, total: 21).progressViewStyle(BarProgressStyle(color:.vinho, height:20.0))
+        if progressDone == 21 {
             Button(action: {
                     lingPred = mostFrequentElement(in: lingList)!
                     resultView = true

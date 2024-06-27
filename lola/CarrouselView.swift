@@ -101,7 +101,7 @@ struct CarrosselView: View {
         
         CardQuestion(
             answer1: Answer(text: "Nunca se cansa de beijos e carícias", lingAmor: 2),
-            answer2: Answer(text: "Gosta quando o escutam e mostram interesse genuíno no que esta dizendo", lingAmor: 3),
+            answer2: Answer(text: "Gosta quando  mostram interesse genuíno no que esta dizendo", lingAmor: 3),
             flag1: false, flag2: false),
         
         CardQuestion(
@@ -125,8 +125,8 @@ struct CarrosselView: View {
             flag1: false, flag2: false),
         
         CardQuestion(
-            answer1: Answer(text: "Aprecia quando as pessoas fazem gestos de serviço e apoio por ele(a)", lingAmor: 0),
-            answer2: Answer(text: "Gosta de receber presentes que pessoas especiais fazem para ele(a)", lingAmor: 4),
+            answer1: Answer(text: "Aprecia quando as pessoas fazem gestos de apoio por ele(a)", lingAmor: 0),
+            answer2: Answer(text: "Gosta presentes que pessoas especiais fazem para ele(a)", lingAmor: 4),
             flag1: false, flag2: false),
     ]
     

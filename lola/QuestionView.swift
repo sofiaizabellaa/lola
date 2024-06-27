@@ -57,7 +57,7 @@ struct PerguntaView: View {
                             .offset(x:-10)
                     })
     
-                }
+                }.offset(x:14)
              
                 
                 Spacer()

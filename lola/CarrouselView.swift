@@ -12,11 +12,11 @@ import SwiftUI
 struct CarrosselView: View {
         
     @State private var currentIndex = 0
-    @State var lingList: [Int] = [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7]
+    @State var lingList: [Int] = [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7]
     @State var lingPred: Int = 7
     @State private var resultView = false
     
-    let items = Array(0..<20)
+    let items = Array(0..<21)
     
     
     // 0 = atos, 1 = tempo, 2 = toques, 3 = palavras, 4 = presentes
@@ -116,16 +116,16 @@ struct CarrosselView: View {
         
         CardQuestion(
             answer1: Answer(text: "Gosta que as pessoas elogiem sua aparência e/ou seus resultados", lingAmor: 3),
-            answer2: Answer(text: "Sente-se amado(a) quando apreciam suas ideias e e respeitam suas opiniões", lingAmor: 1),
+            answer2: Answer(text: "Gosta quando apreciam suas ideias e e respeitam suas opiniões", lingAmor: 1),
             flag1: false, flag2: false),
         
         CardQuestion(
-            answer1: Answer(text: "Não consegue deixar de tocar nas pessoas que ama quando esta perto", lingAmor: 2),
+            answer1: Answer(text: "Não consegue deixar de tocar nas pessoas que ama estando perto", lingAmor: 2),
             answer2: Answer(text: "Atos de serviço fazem com que se sinta amado(a)", lingAmor: 0),
             flag1: false, flag2: false),
         
         CardQuestion(
-            answer1: Answer(text: "Aprecia quando as pessoas  fazem gestos de serviço e apoio por ele(a)", lingAmor: 0),
+            answer1: Answer(text: "Aprecia quando as pessoas fazem gestos de serviço e apoio por ele(a)", lingAmor: 0),
             answer2: Answer(text: "Gosta de receber presentes que pessoas especiais fazem para ele(a)", lingAmor: 4),
             flag1: false, flag2: false),
     ]

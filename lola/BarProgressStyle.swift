@@ -26,7 +26,7 @@ struct BarProgressStyle: ProgressViewStyle {
                     .font(labelFontStyle)
 
                 RoundedRectangle(cornerRadius: 10.0)
-                    .fill(Color(uiColor: .systemGray5))
+                    .fill(Color(uiColor: .whitef))
                     .frame(height: height)
                     .frame(width: width)
                     .overlay(alignment: .leading) {
@@ -47,6 +47,7 @@ struct BarProgressStyle: ProgressViewStyle {
             .frame(maxWidth: .infinity, alignment: .center)
         }
     }
+    
 }
 
 #Preview {

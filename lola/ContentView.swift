@@ -26,9 +26,9 @@ struct InicialView: View {
         
         // Configurar o temporizador para 3 segundos
         .onAppear {
-                   DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                       self.showFullScreenCover = true
-                   }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.showFullScreenCover = true
+            }
                }
         .fullScreenCover(isPresented: $showFullScreenCover) {
                     RelacaoView() // Tela de destino

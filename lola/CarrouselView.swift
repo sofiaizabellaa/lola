@@ -251,7 +251,6 @@ struct CarrosselView: View {
             }
             Spacer()
             .navigationDestination(isPresented: $resultView) { ResultView(lingPred: lingPred) }
-
         }
         
         

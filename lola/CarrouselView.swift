@@ -157,6 +157,9 @@ struct CarrosselView: View {
                                                 questionsList[index].flag1.toggle()
                                                 lingList[index] = questionsList[index].answer1.lingAmor
                                             }
+                                                withAnimation {
+                                                    currentIndex = currentIndex + 1 % items.count
+                                                    prx.scrollTo(currentIndex, anchor: .center) }
                                         })
                                         {
                                             Text("\(questionsList[index].answer1.text)")
@@ -180,7 +183,10 @@ struct CarrosselView: View {
                                                 questionsList[index].flag2.toggle()
                                                 lingList[index] = questionsList[index].answer2.lingAmor
                                                 
-                                            }   }   ) {
+                                            }
+                                            withAnimation {
+                                                currentIndex = currentIndex + 1 % items.count
+                                                prx.scrollTo(currentIndex, anchor: .center) } }   ) {
                                                 Text("\(questionsList[index].answer2.text)")
                                                     .font(.subheadline.weight(.heavy))
                                                     .foregroundColor(.vinho)
